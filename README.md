@@ -4,9 +4,9 @@ A simple full-stack React application that allows users to enter strings and vie
 
 ## Service Status
 
-[![Service Status](https://img.shields.io/badge/Service-Online-brightgreen)](https://stats.uptimerobot.com/qdZdWgw3NS)
+[![Service Status](https://img.shields.io/badge/Service-Online-brightgreen)](https://stats.uptimerobot.com/rNfEEDpzZ7)
 
-🔗 **Live Status Page**: [https://stats.uptimerobot.com/qdZdWgw3NS](https://stats.uptimerobot.com/qdZdWgw3NS)
+🔗 **Live Status Page**: [https://stats.uptimerobot.com/rNfEEDpzZ7](https://stats.uptimerobot.com/rNfEEDpzZ7)
 
 ## Features
 
