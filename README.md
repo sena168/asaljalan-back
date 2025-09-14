@@ -145,7 +145,7 @@ Vercel will automatically:
 - Node.js
 - Express.js
 - CORS middleware
-- In-memory storage (persists during server runtime)
+- Redis for persistent data storage
 
 ### Frontend
 - React 18
@@ -168,9 +168,26 @@ REACT_APP_API_URL=http://localhost:5000
 
 For production, update `REACT_APP_API_URL` to your deployed backend URL.
 
+## Data Persistence
+
+The application now uses **Redis** for persistent data storage, which means:
+
+- **Data persists across server restarts** - Your strings will be saved even when the server is redeployed or restarted
+- **Production-ready storage** - Redis provides reliable, fast data persistence
+- **Automatic reconnection** - The app automatically reconnects to Redis if the connection is lost
+- **Scalable solution** - Redis can handle high-traffic applications efficiently
+
+### Redis Configuration
+
+The backend connects to Redis using the `REDIS_URL` environment variable. In production (Render), this is automatically configured to connect to your Redis instance.
+
+For local development, you can either:
+1. Use the production Redis instance by setting `REDIS_URL` in your `.env` file
+2. Install Redis locally and use `redis://localhost:6379`
+
 ## Notes
 
-- The backend uses in-memory storage, so data will persist during the server session but will be lost on server restart
-- For production use, consider implementing a database (PostgreSQL, MongoDB, etc.)
+- Data is now **permanently stored** in Redis and will survive server restarts and redeployments
 - The app includes error handling and loading states
 - CORS is configured to allow cross-origin requests from the frontend
+- Redis connection status is logged on server startup
